@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>간단한 입력창</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+    }
+    input, button {
+      font-size: 1rem;
+      padding: 10px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>이름을 입력하세요</h2>
+  <input type="text" id="nameInput" placeholder="이름 입력" />
+  <button onclick="submitName()">제출</button>
+  <p id="result"></p>
+
+  <script>
+    function submitName() {
+      const name = document.getElementById("nameInput").value;
+      document.getElementById("result").textContent = `안녕하세요, ${name}님!`;
+    }
+  </script>
+</body>
+</html>
